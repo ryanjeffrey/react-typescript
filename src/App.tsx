@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Message />
+        <Message message='This is a simple message'/>
       </header>
     </div>
   );
