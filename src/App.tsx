@@ -19,6 +19,13 @@ function App() {
   // Any
   let firstName: any = true
 
+  // Void
+  const warning = (): void => {
+    console.log('Warning')
+  }
+  warning()
+
+
 
   return (
     <div className="App">
