@@ -13,6 +13,13 @@ function App() {
   // Tuple
   let aTuple: [string, number] = ['Ryan', 120983]
 
+  // Enum
+  enum Codes {first = 1, second = 2}
+
+  // Any
+  let firstName: any = true
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,6 +29,9 @@ function App() {
         </p>
         <p>
           The value {aTuple[0]} is of {typeof aTuple[0]} type!
+        </p>
+        <p>
+          The value {firstName} is of {typeof firstName} type!
         </p>
       </header>
     </div>
