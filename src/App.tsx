@@ -1,8 +1,14 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import logo from './logo.svg'
 import './App.css';
-import Message from './Message.tsx';
+import Message from './Message.tsx'
 
-function App() {
+class App extends Component<any> {
+
+  componentDidMount() {
+    console.log("It worked!");
+  }
+
 
   // // ******* BASIC TYPES *******
   // // let firstValue: string = 'Ryan'
@@ -27,7 +33,7 @@ function App() {
   // warning()
 
 
-
+render() {
   return (
     <div className="App">
       <header className="App-header">
@@ -37,5 +43,5 @@ function App() {
     </div>
   );
 }
-
+}
 export default App;
