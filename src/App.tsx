@@ -3,17 +3,24 @@ import logo from './logo.svg'
 import './App.css';
 import Message from './Message.tsx'
 
-class App extends Component<any> {
-
-render() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Message name='Ryan' message='this is a simple message.'/>
-      </header>
-    </div>
-  );
+const initialState = {
+  name: 'Ryan',
+  message: 'TypeScript is cool'
 }
+
+type State = Readonly<typeof initialState>
+
+class App extends Component<any, State> {
+  readonly state: State = initialState 
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Message name={this.state.name} message={this.state.message} />
+        </header>
+      </div>
+    );
+  }
 }
 export default App;
